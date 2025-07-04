@@ -227,7 +227,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.classList.toggle('active', btn.dataset.lang === getLang());
     btn.addEventListener('click', e => {
       setLang(btn.dataset.lang);
-      location.reload();
+      document.querySelectorAll('.language-switcher button').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === btn.dataset.lang);
+      });
     });
   });
 });

@@ -12,24 +12,21 @@
   <script src="assets/js/lang.js"></script>
   <script src="assets/js/main.js"></script>
 <body>
-  <div class="site-frame">
-    <div class="site-bar left"></div>
-    <div class="site-main">
-      <header>
-        <div class="language-switcher">
-          <button data-lang="ar">العربية</button>
-          <button data-lang="en">English</button>
-        </div>
-        <nav>
-          <a href="index.html" data-i18n="home">الرئيسية</a>
-          <a href="petra.html" data-i18n="review">مراجعتنا</a>
-          <a href="bonuses.html" data-i18n="bonuses">البونصات</a>
-          <a href="slots.html" data-i18n="slots">أفضل السلوْتس</a>
-          <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
-          <a href="about.html" data-i18n="about">حول الموقع</a>
-        </nav>
-      </header>
-      <main>
+  <header>
+    <div class="language-switcher">
+      <button data-lang="ar">العربية</button>
+      <button data-lang="en">English</button>
+    </div>
+    <nav>
+      <a href="index.html" data-i18n="home">الرئيسية</a>
+      <a href="petra.html" data-i18n="review">مراجعتنا</a>
+      <a href="bonuses.html" data-i18n="bonuses">البونصات</a>
+      <a href="slots.html" data-i18n="slots">أفضل السلوْتس</a>
+      <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
+      <a href="about.html" data-i18n="about">حول الموقع</a>
+    </nav>
+  </header>
+  <main>
         <section class="hero section-parallax">
           <div class="hero-content">
             <img src="assets/img/1xbet-logo.png" data-i18n-alt="1xbet_review_title" alt="1xBet Logo" style="width:80px; margin-bottom:1rem;">
@@ -92,31 +89,28 @@
             </div>
           </div>
         </section>
-      </main>
-      <footer>
-        <div class="footer-col">
-          <h4 data-i18n="about_legal">الشرعية والأمان</h4>
-          <p data-i18n="legal_info">1xBet مرخص دولياً ويستخدم تشفير SSL. جميع المدفوعات آمنة وموثوقة.</p>
-        </div>
-        <div class="footer-col footer-payments">
-          <h4 data-i18n="payment_methods">طرق الدفع</h4>
-          <img src="assets/img/visa.png" data-i18n-alt="payment_methods" alt="Visa">
-          <img src="assets/img/crypto.png" data-i18n-alt="payment_methods" alt="Crypto">
-          <img src="assets/img/neteller.png" data-i18n-alt="payment_methods" alt="NETELLER">
-        </div>
-        <div class="footer-col">
-          <div>© 2025 Petra.bet Affiliate. جميع الحقوق محفوظة.</div>
-          <div data-i18n="email">للتواصل: <a href="mailto:affiliate@petra.bet">affiliate@petra.bet</a></div>
-        </div>
-      </footer>
-      <script>
-        window.addEventListener('DOMContentLoaded', function() {
-          if (typeof updateTranslations === 'function') updateTranslations();
-        });
-      </script>
+  </main>
+  <footer>
+    <div class="footer-col">
+      <h4 data-i18n="about_legal">الشرعية والأمان</h4>
+      <p data-i18n="legal_info">1xBet مرخص دولياً ويستخدم تشفير SSL. جميع المدفوعات آمنة وموثوقة.</p>
     </div>
-    <div class="site-bar right"></div>
-  </div>
+    <div class="footer-col footer-payments">
+      <h4 data-i18n="payment_methods">طرق الدفع</h4>
+      <img src="assets/img/visa.png" data-i18n-alt="payment_methods" alt="Visa">
+      <img src="assets/img/crypto.png" data-i18n-alt="payment_methods" alt="Crypto">
+      <img src="assets/img/neteller.png" data-i18n-alt="payment_methods" alt="NETELLER">
+    </div>
+    <div class="footer-col">
+      <div>© 2025 Petra.bet Affiliate. جميع الحقوق محفوظة.</div>
+      <div data-i18n="email">للتواصل: <a href="mailto:affiliate@petra.bet">affiliate@petra.bet</a></div>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (typeof updateTranslations === 'function') updateTranslations();
+    });
+  </script>
 </body>
 </body>
 </html>
