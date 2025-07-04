@@ -1,14 +1,13 @@
 {
-    // Olası öznitelikler hakkında bilgi edinmek için IntelliSense kullanın.
-    // Mevcut özniteliklerin açıklamalarını görüntülemek için üzerine gelin.
-    // Daha fazla bilgi için şu adresi ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to see descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Chrome'u localhost'ta başlat",
+            "name": "Launch Chrome on localhost",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
         }

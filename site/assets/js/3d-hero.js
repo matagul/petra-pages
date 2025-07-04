@@ -1,5 +1,5 @@
 // 3d-hero.js
-// Three.js ile 3D roulette wheel ve animasyonlar (placeholder model)
+// Three.js roulette wheel placeholder with basic animation
 
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.module.js';
 
@@ -17,21 +17,21 @@ function init3DRoulette() {
   renderer.setClearColor(0x000000, 0);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  // Işıklar
+  // Lights
   const ambient = new THREE.AmbientLight(0xffffff, 0.7);
   scene.add(ambient);
   const spot = new THREE.SpotLight(0xffd700, 1.2, 20, Math.PI / 4, 0.5, 1);
   spot.position.set(0, 5, 5);
   scene.add(spot);
 
-  // Basit 3D rulet tekeri (placeholder, gerçek modelle değiştirilebilir)
+  // Simple roulette wheel (replace with real model)
   const wheelGeo = new THREE.CylinderGeometry(2, 2, 0.5, 64, 1, false);
   const wheelMat = new THREE.MeshPhysicalMaterial({ color: 0xFFD700, metalness: 0.8, roughness: 0.2, clearcoat: 1, clearcoatRoughness: 0.1 });
   wheel = new THREE.Mesh(wheelGeo, wheelMat);
   wheel.position.y = 0.5;
   scene.add(wheel);
 
-  // Parıltı efekti
+  // Glow effect
   const glowGeo = new THREE.RingGeometry(2.1, 2.5, 64);
   const glowMat = new THREE.MeshBasicMaterial({ color: 0xFFD700, transparent: true, opacity: 0.18, side: THREE.DoubleSide });
   const glow = new THREE.Mesh(glowGeo, glowMat);
@@ -41,7 +41,7 @@ function init3DRoulette() {
 
   window.addEventListener('resize', onWindowResize);
 
-  // Hero section görünür olduğunda animasyonu başlat/bitir
+main
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
