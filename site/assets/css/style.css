@@ -1,0 +1,225 @@
+/* Petra.bet Affiliate - Dark Theme, Slot-Style Accents */
+:root {
+  --color-bg: #18122B;
+  --color-bg-alt: #231942;
+  --color-primary: #D72660;
+  --color-accent: #FFD700;
+  --color-secondary: #7C3AED;
+  --color-text: #F3F3F3;
+  --color-muted: #B0A8B9;
+  --color-success: #2ecc40;
+  --color-danger: #e74c3c;
+  --border-radius: 12px;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Tajawal', 'Cairo', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  min-height: 100vh;
+}
+
+body.ltr {
+  direction: ltr;
+}
+
+header, footer {
+  background: var(--color-bg-alt);
+  padding: 1.2rem 0.5rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color var(--transition);
+}
+
+nav a.active, nav a:hover {
+  color: var(--color-primary);
+}
+
+.hero {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--color-accent);
+  padding: 2.5rem 1rem 2rem 1rem;
+  border-radius: var(--border-radius);
+  margin: 1.5rem auto 1rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 32px 0 #0008;
+  text-align: center;
+}
+
+.cta-btn {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.9rem 2.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 #0005;
+  transition: background var(--transition), color var(--transition);
+}
+
+.cta-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: var(--color-bg-alt);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px 0 #0003;
+  padding: 1.2rem;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 220px;
+  position: relative;
+}
+
+.card .badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-radius: 8px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.card .logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+}
+
+.card .cta-btn {
+  margin-top: auto;
+  align-self: stretch;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-bg-alt);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 0.8rem 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #2d2546;
+}
+
+.comparison-table th {
+  background: var(--color-secondary);
+  color: var(--color-accent);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badges {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 1.2rem 0;
+}
+
+.badge {
+  background: var(--color-success);
+  color: var(--color-bg);
+  border-radius: 8px;
+  padding: 0.3rem 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 1px 4px 0 #0002;
+}
+
+.badge.danger {
+  background: var(--color-danger);
+}
+
+footer {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin-top: 2rem;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.language-switcher button {
+  background: none;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 6px;
+  padding: 0.3rem 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.language-switcher button.active, .language-switcher button:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    font-size: 1.1rem;
+  }
+  .card {
+    padding: 0.7rem;
+    min-height: 160px;
+  }
+  nav {
+    gap: 0.7rem;
+  }
+}
