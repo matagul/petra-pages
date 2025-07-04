@@ -1,0 +1,264 @@
+/* Premium 3D Casino Theme for Petra.bet Affiliate */
+:root {
+  --color-bg: #10131a;
+  --color-bg-alt: #181c24;
+  --color-primary: #FFD700;
+  --color-accent: #1e90ff;
+  --color-emerald: #2ecc71;
+  --color-gold: #FFD700;
+  --color-royal: #4169e1;
+  --color-text: #f5f5f5;
+  --color-muted: #b0b8c1;
+  --color-shadow: 0 8px 32px 0 #000a;
+  --border-radius: 18px;
+  --transition: 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+body {
+  background: linear-gradient(135deg, #10131a 0%, #181c24 100%);
+  color: var(--color-text);
+  font-family: 'Tajawal', 'Cairo', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body.ltr {
+  direction: ltr;
+}
+body.rtl {
+  direction: rtl;
+}
+
+header {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  padding: 1.2rem 0 0.5rem 0;
+  background: rgba(16,19,26,0.7);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 2px 24px 0 #0005;
+  backdrop-filter: blur(8px);
+}
+
+nav a {
+  color: var(--color-gold);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  position: relative;
+  transition: color var(--transition);
+}
+nav a.active, nav a:hover {
+  color: var(--color-royal);
+}
+nav a::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-royal));
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+nav a.active::after, nav a:hover::after {
+  width: 80%;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin: 0.5rem 2rem 0 0;
+}
+.language-switcher button {
+  background: rgba(30,144,255,0.1);
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold);
+  border-radius: 8px;
+  padding: 0.3rem 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px 0 #0002;
+}
+.language-switcher button.active, .language-switcher button:hover {
+  background: var(--color-gold);
+  color: #181c24;
+  box-shadow: 0 0 16px 2px var(--color-gold);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: none;
+}
+.hero-canvas {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2rem 1rem;
+  background: rgba(24,28,36,0.7);
+  border-radius: 32px;
+  box-shadow: 0 8px 48px 0 #000a;
+  border: 2.5px solid var(--color-gold);
+  backdrop-filter: blur(8px);
+}
+.hero-content h1 {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: var(--color-gold);
+  text-shadow: 0 2px 24px var(--color-gold), 0 1px 0 #000;
+  margin-bottom: 1.2rem;
+}
+.hero-content p {
+  font-size: 1.3rem;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  background: linear-gradient(90deg, var(--color-gold), var(--color-royal));
+  color: #181c24;
+  border: none;
+  border-radius: 16px;
+  padding: 1.1rem 2.7rem;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-top: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 24px 0 var(--color-gold), 0 2px 12px 0 #0005;
+  transition: box-shadow var(--transition), background var(--transition), color var(--transition);
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+}
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: 0 0 32px 8px var(--color-gold);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.cta-btn:hover, .cta-btn:focus {
+  background: linear-gradient(90deg, var(--color-royal), var(--color-gold));
+  color: var(--color-gold);
+  box-shadow: 0 0 32px 8px var(--color-gold), 0 2px 12px 0 #0005;
+}
+.cta-btn:hover::before, .cta-btn:focus::before {
+  opacity: 1;
+}
+
+/* 3D Card/Chip/Feature Styles */
+.card-3d {
+  background: linear-gradient(135deg, #181c24 60%, #232a36 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 #000a, 0 1.5px 0 0 var(--color-gold);
+  border: 2px solid var(--color-gold);
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  margin: 1.2rem auto;
+  max-width: 340px;
+  color: var(--color-text);
+  position: relative;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s;
+  will-change: transform;
+  perspective: 800px;
+}
+.card-3d:hover {
+  transform: rotateY(8deg) scale(1.04);
+  box-shadow: 0 16px 48px 0 var(--color-gold), 0 2px 12px 0 #0005;
+}
+.card-3d .icon-3d {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 12px var(--color-gold));
+}
+
+/* Parallax & Section Animations */
+.section-parallax {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  background: none;
+}
+
+.section-parallax .parallax-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-parallax .parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer */
+footer {
+  background: #181c24;
+  color: var(--color-muted);
+  padding: 2.2rem 1rem 1.2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  border-top: 2px solid var(--color-gold);
+  font-size: 1.1rem;
+}
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 180px;
+}
+.footer-col h4 {
+  color: var(--color-gold);
+  margin-bottom: 0.7rem;
+  font-size: 1.15rem;
+}
+.footer-payments img {
+  height: 32px;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 0 8px var(--color-gold));
+}
+
+@media (max-width: 900px) {
+  .hero-content { padding: 1.2rem 0.5rem; }
+  nav { gap: 1rem; }
+  .card-3d { max-width: 98vw; }
+  footer { flex-direction: column; gap: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 { font-size: 1.5rem; }
+  .hero-content { padding: 0.7rem; }
+  .card-3d { padding: 1rem 0.5rem; }
+}
