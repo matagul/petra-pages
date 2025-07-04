@@ -20,24 +20,27 @@
   <script type="module" src="assets/js/3d-hero.js"></script>
 </head>
 <body>
-  <header>
-    <div class="language-switcher">
-      <button data-lang="ar">العربية</button>
-      <button data-lang="en">English</button>
-    </div>
-    <nav>
-      <a href="index.html" data-i18n="home">الرئيسية</a>
-      <a href="petra.html" data-i18n="review">مراجعتنا</a>
-      <a href="bonuses.html" data-i18n="bonuses">البونصات</a>
-      <a href="slots.html" data-i18n="slots">أفضل السلوتس</a>
-      <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
-      <a href="about.html" data-i18n="about">حول الموقع</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <canvas id="hero-canvas" class="hero-canvas"></canvas>
-      <div class="hero-content">
+  <div class="site-frame">
+    <div class="site-bar left"></div>
+    <div class="site-main">
+      <header>
+        <div class="language-switcher">
+          <button data-lang="ar">العربية</button>
+          <button data-lang="en">English</button>
+        </div>
+        <nav>
+          <a href="index.html" data-i18n="home">الرئيسية</a>
+          <a href="petra.html" data-i18n="review">مراجعتنا</a>
+          <a href="bonuses.html" data-i18n="bonuses">البونصات</a>
+          <a href="slots.html" data-i18n="slots">أفضل السلوتس</a>
+          <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
+          <a href="about.html" data-i18n="about">حول الموقع</a>
+        </nav>
+      </header>
+      <main>
+        <section class="hero">
+          <canvas id="hero-canvas" class="hero-canvas"></canvas>
+          <div class="hero-content">
         <h1 data-i18n="hero_title">Petra Bet: حيث يلتقي الفخامة باللعب</h1>
         <p data-i18n="hero_desc">انضم إلى عالم النخبة مع أفضل كازينو اونلاين في الأردن. بونصات حصرية، ألعاب ثلاثية الأبعاد، ودعم VIP.</p>
         <a href="https://petra.bet/?ref=CODE" class="cta-btn" data-i18n="join_now" target="_blank">سجّل الآن</a>
@@ -117,7 +120,10 @@
         </div>
       </div>
     </section>
-  </main>
+      </main>
+    </div>
+    <div class="site-bar right"></div>
+  </div>
   <footer>
     <div class="footer-col">
       <h4 data-i18n="about_legal">الشرعية والأمان</h4>
