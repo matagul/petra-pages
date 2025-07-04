@@ -41,7 +41,7 @@ function init3DRoulette() {
 
   window.addEventListener('resize', onWindowResize);
 
-  // Start/stop animation based on hero section visibility
+main
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
