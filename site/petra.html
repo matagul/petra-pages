@@ -33,6 +33,7 @@
   <main>
         <section class="hero section-parallax">
           <canvas id="hero-canvas" class="hero-canvas"></canvas>
+          <div class="parallax-bg" data-speed="0.15" style="background: radial-gradient(circle at center, rgba(255,215,0,0.15), transparent);"></div>
           <div class="hero-content">
             <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/roulette-2028740_1280.png" alt="Petra.bet 3D" style="width:90px; margin-bottom:1rem; filter:drop-shadow(0 0 24px gold);">
             <h1 data-i18n="review">مراجعتنا</h1>
@@ -41,6 +42,7 @@
           </div>
         </section>
         <section class="section-parallax review-details">
+          <div class="parallax-bg" data-speed="0.2" style="background: radial-gradient(ellipse at center, rgba(30,32,44,0.6), transparent);"></div>
           <div class="parallax-content">
             <h2>Nasıl Kayıt Olunur?</h2>
             <ol>
@@ -107,6 +109,13 @@
     <div>© 2025 Petra.bet Affiliate. جميع الحقوق محفوظة.</div>
     <div>للتواصل: <a href="mailto:affiliate@petra.bet">affiliate@petra.bet</a></div>
   </footer>
-</body>
+  <div class="sticky-chip"></div>
+  <script src="assets/js/scroll-effects.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (window.init3DRoulette) window.init3DRoulette();
+      if (typeof updateTranslations === 'function') updateTranslations();
+    });
+  </script>
 </body>
 </html>
