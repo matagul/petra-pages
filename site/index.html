@@ -37,6 +37,7 @@
   <main>
         <section class="hero">
           <canvas id="hero-canvas" class="hero-canvas"></canvas>
+          <div class="parallax-bg" data-speed="0.15" style="background: radial-gradient(circle at center, rgba(255,215,0,0.15), transparent);"></div>
           <div class="hero-content">
         <h1 data-i18n="hero_title">Petra Bet: حيث يلتقي الفخامة باللعب</h1>
         <p data-i18n="hero_desc">انضم إلى عالم النخبة مع أفضل كازينو اونلاين في الأردن. بونصات حصرية، ألعاب ثلاثية الأبعاد، ودعم VIP.</p>
@@ -45,6 +46,7 @@
     </section>
     <!-- Özellikler Bölümü: 3D ikonlar ve animasyonlu grid -->
     <section class="section-parallax" id="features">
+      <div class="parallax-bg" data-speed="0.2" style="background: radial-gradient(ellipse at center, rgba(30,32,44,0.6), transparent);"></div>
       <div class="parallax-content">
         <h2 data-i18n="features" style="text-align:center; margin-bottom:2.5rem;">مميزاتنا</h2>
         <div class="grid" style="justify-items:center;">
@@ -69,6 +71,7 @@
 
     <!-- Oyunlar Bölümü: 3D kart grid ve görseller -->
     <section class="section-parallax" id="offerings">
+      <div class="parallax-bg" data-speed="0.25" style="background: radial-gradient(ellipse at center, rgba(0,163,255,0.2), transparent);"></div>
       <div class="parallax-content">
         <h2 data-i18n="offerings" style="text-align:center; margin-bottom:2.5rem;">ألعابنا</h2>
         <div class="grid" style="justify-items:center;">
@@ -93,6 +96,7 @@
 
     <!-- Affiliate Dashboard Preview -->
     <section class="section-parallax" id="affiliate">
+      <div class="parallax-bg" data-speed="0.22" style="background: radial-gradient(circle at center, rgba(0,255,208,0.1), transparent);"></div>
       <div class="parallax-content">
         <h2 data-i18n="affiliate" style="text-align:center; margin-bottom:2.5rem;">برنامج الشراكة</h2>
         <div class="card-3d" style="max-width:500px; margin:auto;">
@@ -106,6 +110,7 @@
 
     <!-- Yasal ve Güvenlik Bölümü -->
     <section class="section-parallax" id="about-legal">
+      <div class="parallax-bg" data-speed="0.2" style="background: radial-gradient(circle at center, rgba(255,215,0,0.1), transparent);"></div>
       <div class="parallax-content">
         <h2 data-i18n="about_legal" style="text-align:center; margin-bottom:2.5rem;">الشرعية والأمان</h2>
         <div class="card-3d" style="max-width:600px; margin:auto;">
@@ -134,6 +139,7 @@
       <p><a href="mailto:affiliate@petra.bet">affiliate@petra.bet</a></p>
     </div>
   </footer>
+  <div class="sticky-chip"></div>
   <script>
     window.addEventListener('DOMContentLoaded', function() {
       if (window.init3DRoulette) window.init3DRoulette();
@@ -148,5 +154,6 @@
       updateTranslations();
     });
   </script>
+  <script src="assets/js/scroll-effects.js"></script>
 </body>
 </html>

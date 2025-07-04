@@ -4,6 +4,7 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.module.js';
 
 let scene, camera, renderer, wheel, animateId;
+let started = false;
 
 function init3DRoulette() {
   const canvas = document.getElementById('hero-canvas');
@@ -39,13 +40,38 @@ function init3DRoulette() {
   scene.add(glow);
 
   window.addEventListener('resize', onWindowResize);
-  animate();
+
+  // Hero section görünür olduğunda animasyonu başlat/bitir
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startAnimation();
+      } else {
+        stopAnimation();
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(canvas.parentElement);
 }
 
 function animate() {
-  animateId = requestAnimationFrame(animate);
+  if (!started) return;
   if (wheel) wheel.rotation.y += 0.008;
   renderer.render(scene, camera);
+  animateId = requestAnimationFrame(animate);
+}
+
+function startAnimation() {
+  if (!started) {
+    started = true;
+    animate();
+  }
+}
+
+function stopAnimation() {
+  started = false;
+  if (animateId) cancelAnimationFrame(animateId);
+  animateId = null;
 }
 
 function onWindowResize() {
