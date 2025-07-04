@@ -1,8 +1,8 @@
 // main.js
-// Ortak JS: sayfa geçişleri, nav, footer, dinamik içerik
+// Common JS: navigation highlighting, smooth scroll and dynamic content
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Aktif nav linkini işaretle
+  // Highlight active nav link
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
     if (location.pathname.endsWith(link.getAttribute('href'))) {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Sayfa geçişleri için smooth scroll
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Dil tercihi body class'ı
+  // Body language class
   const lang = localStorage.getItem('lang') || 'ar';
   document.body.classList.toggle('ltr', lang === 'en');
   document.body.classList.toggle('rtl', lang === 'ar');

@@ -1,5 +1,5 @@
 // site-config.js
-// Tüm site genelinde kullanılacak veriler (rakipler, bonuslar, affiliate kodları)
+// Data used across the site (competitors, bonuses, affiliate links)
 
 const SITE_CONFIG = {
   affiliateLink: 'https://petra.bet/?ref=CODE',
@@ -18,8 +18,8 @@ const SITE_CONFIG = {
       license: 'Curacao',
       services: ['Slots', 'Sports', 'Live Casino'],
       paymentMethods: ['Visa', 'Mastercard', 'Skrill', 'Neteller', 'Crypto'],
-      pros: ['Hızlı ödemeler', 'Geniş oyun seçkisi'],
-      cons: ['Bazı ülkelerde kısıtlı'],
+      pros: ['Fast payouts', 'Large game selection'],
+      cons: ['Restricted in some countries'],
       affiliate: 'https://20bet.com/?ref=CODE',
     },
     {
@@ -36,8 +36,8 @@ const SITE_CONFIG = {
       license: 'Curacao',
       services: ['Slots', 'Sports', 'Poker', 'Live Casino'],
       paymentMethods: ['Visa', 'Mastercard', 'WebMoney', 'Crypto'],
-      pros: ['Çoklu para birimi', 'Mobil uygulama'],
-      cons: ['Yoğun site arayüzü'],
+      pros: ['Multi-currency', 'Mobile app'],
+      cons: ['Busy interface'],
       affiliate: 'https://1xbet.com/?ref=CODE',
     },
     {
@@ -54,8 +54,8 @@ const SITE_CONFIG = {
       license: 'Gibraltar, UKGC',
       services: ['Slots', 'Sports', 'Live Casino'],
       paymentMethods: ['Visa', 'Mastercard', 'Paysafecard'],
-      pros: ['Güvenilir marka', 'Kapsamlı bahis seçenekleri'],
-      cons: ['Bonuslar sınırlı'],
+      pros: ['Trusted brand', 'Wide betting options'],
+      cons: ['Bonuses limited'],
       affiliate: 'https://bet365.com/?ref=CODE',
     },
     {
@@ -72,8 +72,8 @@ const SITE_CONFIG = {
       license: 'Isle of Man',
       services: ['Sports', 'Live Casino'],
       paymentMethods: ['Visa', 'Skrill', 'Neteller'],
-      pros: ['Yüksek oranlar', 'Mobil uyumlu'],
-      cons: ['Slot seçkisi sınırlı'],
+      pros: ['High odds', 'Mobile friendly'],
+      cons: ['Limited slot selection'],
       affiliate: 'https://sbobet.com/?ref=CODE',
     },
     {
@@ -90,8 +90,8 @@ const SITE_CONFIG = {
       license: 'Curacao',
       services: ['Slots', 'Sports', 'Live Casino'],
       paymentMethods: ['Visa', 'Mastercard', 'Crypto'],
-      pros: ['Çoklu promosyon', 'Geniş ödeme seçenekleri'],
-      cons: ['Web sitesi yoğun'],
+      pros: ['Many promotions', 'Wide payment options'],
+      cons: ['Busy website'],
       affiliate: 'https://melbet.com/?ref=CODE',
     },
   ],
@@ -106,10 +106,10 @@ const SITE_CONFIG = {
       wagering: '35x',
     },
     license: 'Curacao',
-    services: ['Slots', 'Sports', 'Live Casino', 'Kazı Kazan'],
+    services: ['Slots', 'Sports', 'Live Casino', 'Scratch Cards'],
     paymentMethods: ['Visa', 'Mastercard', 'Fawry', 'Crypto'],
-    pros: ['Yüksek bonus', 'Arapça destek', 'Mobil uyumlu'],
-    cons: ['Yeni platform'],
+    pros: ['High bonus', 'Arabic support', 'Mobile friendly'],
+    cons: ['New platform'],
     affiliate: 'https://petra.bet/?ref=CODE',
   },
   slots: [

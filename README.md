@@ -1,40 +1,39 @@
 # Petra.bet Affiliate Static Site
 
-## Kurulum ve Yayınlama (FTP ile)
+## Deployment via FTP
 
-1. **site/** klasörünü ZIP arşivine ekleyin:
+1. Create a zip archive of the **site/** directory:
    ```bash
    zip -r petra-bet-affiliate.zip site/
    ```
-2. **petra-bet-affiliate.zip** dosyasını FTP ile sunucunuzun kök dizinine yükleyin.
-3. Sunucuda ZIP dosyasını çıkarın:
+2. Upload **petra-bet-affiliate.zip** to your server's root directory via FTP.
+3. Extract the archive on the server:
    ```bash
    unzip petra-bet-affiliate.zip
    ```
-4. Tüm sayfalar ve dosyalar `/site/` klasöründe hazırdır. Herhangi bir ek kurulum veya yazılım gerekmez.
+4. All pages are ready under the `/site/` folder. No additional setup or software is required.
 
-## Dosya Yapısı
+## File Structure
+- `site/*.html` — All pages (homepage, competitors, bonuses, slots, FAQ, about)
+- `site/assets/css/` — CSS files
+- `site/assets/js/` — JavaScript and configuration files
+- `site/assets/img/` — Images and placeholder icons
 
-- `site/*.html` — Tüm sayfalar (ana sayfa, rakipler, bonus, slotlar, SSS, hakkımızda)
-- `site/assets/css/` — CSS dosyaları
-- `site/assets/js/` — JS ve konfigürasyon dosyaları
-- `site/assets/img/` — Görseller ve placeholder ikonlar
+## Features
+- Mobile friendly, fast dark theme
+- RTL (Arabic) and LTR (English) support
+- Language preference saved in localStorage
+- Consistent navigation and footer across pages
+- JSON configuration for easy data management
+- No frameworks or build steps needed
 
-## Özellikler
-- Mobil uyumlu, hızlı, koyu tema
-- RTL (Arapça) ve LTR (İngilizce) desteği
-- Dil tercihi localStorage ile saklanır
-- Tüm sayfalarda tutarlı nav ve footer
-- JSON konfigürasyon ile kolay veri yönetimi
-- Herhangi bir framework veya kurulum gerektirmez
+## Images
+Place all logo and screenshot files in the `/assets/img/` folder (currently placeholders).
 
-## Görseller
-- Tüm logo ve ekran görüntüsü dosyalarını `/assets/img/` klasörüne ekleyin. (Şu anda placeholder olarak eklenmiştir.)
-
-## Notlar
-- Affiliate linkleri ve görsellerde `CODE` ve placeholder dosya adlarını kendi bilgilerinizle değiştirin.
-- Tüm sayfalar doğrudan FTP ile yüklenip çalışır.
+## Notes
+Replace `CODE` and placeholder file names with your own affiliate codes and images.
+All pages can be uploaded via FTP and will work immediately.
 
 ---
 
-**İletişim:** affiliate@petra.bet
+**Contact:** [affiliate@petra.bet](mailto:affiliate@petra.bet)
