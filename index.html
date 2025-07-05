@@ -21,7 +21,7 @@
 </head>
 <body>
   <header>
-    <div style="display:flex;align-items:center;gap:0.5rem;width:100%;justify-content:space-between;">
+    <div class="header-row">
       <div class="site-logo">
         <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
         <span>Petra.bet</span>
@@ -56,7 +56,7 @@
   <main>
     <div class="container">
       <section class="hero">
-        <div class="parallax-bg" data-speed="0.15" style="background-image:url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80'); opacity:0.18;"></div>
+        <div class="parallax-bg" data-speed="0.15"></div>
         <canvas id="hero-canvas" class="hero-canvas"></canvas>
         <div class="hero-content fade-in">
           <h1 data-i18n="hero_title">Petra Bet: حيث يلتقي الفخامة باللعب</h1>
@@ -144,7 +144,7 @@
       <section class="section-parallax" id="competitor-comparison">
         <div class="parallax-bg" data-speed="0.18" style="background: radial-gradient(ellipse at center, rgba(255,215,0,0.08), transparent);"></div>
         <div class="parallax-content">
-          <h2 data-i18n="bonus_table_title" style="text-align:center; margin-bottom:2rem;">جدول مقارنة البونصات</h2>
+          <h2 data-i18n="bonus_table_title" class="centered-title">جدول مقارنة البونصات</h2>
           <div class="table-responsive">
             <table class="comparison-table premium-compare slide-in-up">
               <thead>
@@ -159,8 +159,8 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><img src="assets/img/petra-logo.png" alt="Petra.bet" style="width:32px;vertical-align:middle;"> Petra.bet</td>
-                  <td><span style="color:var(--color-gold);font-weight:700;">150%</span></td>
+                  <td><img src="assets/img/petra-logo.png" alt="Petra.bet" class="table-logo"> Petra.bet</td>
+                  <td><span class="gold-text">150%</span></td>
                   <td>100 JOD</td>
                   <td>200</td>
                   <td>35x</td>
