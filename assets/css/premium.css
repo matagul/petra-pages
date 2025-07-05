@@ -74,22 +74,26 @@ nav {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 100vw;
 }
 
 nav a {
   color: var(--color-gold);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   letter-spacing: 0.03em;
   position: relative;
-  padding: 0.5rem 1.2rem;
-  border-radius: 12px;
+  padding: 0.4rem 0.7rem;
+  border-radius: 10px;
   transition: color var(--transition), background var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
   outline: none;
+  min-width: 0;
 }
 nav a.active, nav a:focus, nav a:hover {
   color: #fff;
@@ -331,6 +335,15 @@ footer {
   filter: drop-shadow(0 0 8px var(--color-gold));
 }
 
+@media (max-width: 1200px) {
+  nav a {
+    font-size: 0.98rem;
+    padding: 0.3rem 0.5rem;
+  }
+  nav {
+    gap: 1rem;
+  }
+}
 @media (max-width: 900px) {
   header {
     height: 56px;
@@ -347,7 +360,11 @@ footer {
     display: none !important;
   }
   .hamburger {
-    display: flex;
+    display: flex !important;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1200;
   }
   .mobile-nav {
     display: flex;
@@ -393,6 +410,23 @@ footer {
     height: 30px;
     width: 30px;
   }
+  nav a, .mobile-nav a {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 7px;
+    word-break: break-word;
+    white-space: normal;
+  }
+  nav {
+    gap: 0.3rem;
+  }
+  .hamburger {
+    height: 34px;
+    width: 34px;
+    margin: 0 0.1rem;
+    top: 4px;
+    right: 4px;
+  }
   .mobile-nav {
     top: 48px;
     padding: 0.7rem 0 0.7rem 0;
@@ -401,17 +435,29 @@ footer {
 
 .sticky-chip {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, var(--color-gold), #b8860b);
-  box-shadow: 0 0 20px var(--color-gold), 0 0 8px #000;
-  z-index: 900;
-  pointer-events: none;
-  transform: rotate(0deg);
-  transition: transform var(--transition);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  width: 100vw;
+  background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-accent) 100%);
+  box-shadow: 0 2px 8px 0 #0005;
+  z-index: 2000;
+  border-radius: 0 0 8px 8px;
+  pointer-events: auto;
+  transition: width 0.22s cubic-bezier(.4,0,.2,1), background 0.22s;
+  transform: none !important;
+  cursor: pointer;
+  opacity: 0.95;
+}
+.sticky-chip[hidden] {
+  display: none !important;
+}
+@media (max-width: 600px) {
+  .sticky-chip {
+    height: 4px;
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 .container {

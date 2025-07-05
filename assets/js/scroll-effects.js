@@ -11,13 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const progress = docHeight > 0 ? scrollTop / docHeight : 0;
 
     if (stickyChip) {
-      stickyChip.style.transform = `rotate(${progress * 360}deg)`;
+      stickyChip.style.width = (progress * 100) + '%';
+      stickyChip.style.background = `linear-gradient(90deg, var(--color-gold) 0%, var(--color-accent) ${(progress * 100)}%)`;
     }
 
     parallaxElems.forEach(el => {
       const speed = parseFloat(el.dataset.speed || '0.3');
       el.style.transform = `translate3d(0,${-scrollTop * speed}px,0)`;
     });
+  }
+
+  if (stickyChip) {
+    stickyChip.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    stickyChip.style.pointerEvents = 'auto';
   }
 
   updateScroll();
