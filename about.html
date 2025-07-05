@@ -13,23 +13,12 @@
   <script src="assets/js/main.js"></script>
 </head>
 <body>
-  <header>
-    <div class="header-row">
-      <div class="site-logo">
-        <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
-        <span>Petra.bet</span>
-      </div>
-      <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="language-switcher">
-        <button data-lang="ar">العربية</button>
-        <button data-lang="en">English</button>
-      </div>
+  <header class="header">
+    <div class="header-logo">
+      <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
+      <span>Petra.bet</span>
     </div>
-    <nav>
+    <nav class="nav-center">
       <a href="index.html" data-i18n="home">الرئيسية</a>
       <a href="petra.html" data-i18n="review">مراجعتنا</a>
       <a href="bonuses.html" data-i18n="bonuses">البونصات</a>
@@ -37,6 +26,15 @@
       <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
       <a href="about.html" data-i18n="about" class="active">حول الموقع</a>
     </nav>
+    <div class="header-lang">
+      <button data-lang="ar">العربية</button>
+      <button data-lang="en">English</button>
+    </div>
+    <button class="header-toggle" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
       <a href="index.html" data-i18n="home">الرئيسية</a>
       <a href="petra.html" data-i18n="review">مراجعتنا</a>
@@ -56,7 +54,7 @@
         </div>
       </section>
       <section class="section-parallax" id="affiliate">
-        <div class="parallax-bg" data-speed="0.2" style="background: radial-gradient(circle at center, rgba(0,255,208,0.1), transparent);"></div>
+        <div class="parallax-bg bg-radial-green" data-speed="0.2"></div>
         <div class="parallax-content">
           <h2 data-i18n="affiliate">برنامج الشراكة</h2>
           <div class="card-3d card-maxwidth">
@@ -72,7 +70,7 @@
         </div>
       </section>
       <section class="section-parallax" id="contact">
-        <div class="parallax-bg" data-speed="0.25" style="background: radial-gradient(ellipse at center, rgba(30,32,44,0.6), transparent);"></div>
+        <div class="parallax-bg bg-radial-dark" data-speed="0.25"></div>
         <div class="parallax-content">
           <h2 data-i18n="contact">تواصل معنا</h2>
           <div class="card-3d card-maxwidth">
@@ -81,7 +79,7 @@
         </div>
       </section>
       <section class="section-parallax" id="languages">
-        <div class="parallax-bg" data-speed="0.25" style="background: radial-gradient(ellipse at center, rgba(0,163,255,0.2), transparent);"></div>
+        <div class="parallax-bg bg-radial-blue" data-speed="0.25"></div>
         <div class="parallax-content">
           <h2>Supported Languages</h2>
           <div class="card-3d card-maxwidth">
@@ -98,9 +96,9 @@
     </div>
     <div class="footer-col footer-payments">
       <h4 data-i18n="payment_methods"></h4>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Neteller_logo.svg" alt="NETELLER" style="height:32px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_Inc._logo.svg" alt="Visa" style="height:32px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Cryptocurrency_Logo.svg" alt="Crypto" style="height:32px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Neteller_logo.svg" alt="NETELLER" class="icon-32">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Visa_Inc._logo.svg" alt="Visa" class="icon-32">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Cryptocurrency_Logo.svg" alt="Crypto" class="icon-32">
     </div>
     <div class="footer-col">
       <h4 data-i18n="contact">Contact</h4>

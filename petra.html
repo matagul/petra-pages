@@ -16,23 +16,12 @@
   <script src="assets/js/lang.js"></script>
   <script src="assets/js/main.js"></script>
 <body>
-  <header>
-    <div class="header-row">
-      <div class="site-logo">
-        <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
-        <span>Petra.bet</span>
-      </div>
-      <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="language-switcher">
-        <button data-lang="ar">العربية</button>
-        <button data-lang="en">English</button>
-      </div>
+  <header class="header">
+    <div class="header-logo">
+      <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
+      <span>Petra.bet</span>
     </div>
-    <nav>
+    <nav class="nav-center">
       <a href="index.html">الرئيسية</a>
       <a href="petra.html" class="active">مراجعتنا</a>
       <a href="bonuses.html">البونصات</a>
@@ -40,6 +29,15 @@
       <a href="faq.html">الأسئلة الشائعة</a>
       <a href="about.html">حول الموقع</a>
     </nav>
+    <div class="header-lang">
+      <button data-lang="ar">العربية</button>
+      <button data-lang="en">English</button>
+    </div>
+    <button class="header-toggle" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
       <a href="index.html">الرئيسية</a>
       <a href="petra.html" class="active">مراجعتنا</a>
@@ -53,7 +51,7 @@
     <div class="container">
       <section class="hero section-parallax">
         <canvas id="hero-canvas" class="hero-canvas"></canvas>
-        <div class="parallax-bg" data-speed="0.15"></div>
+        <div class="parallax-bg bg-radial-dark" data-speed="0.15"></div>
         <div class="hero-content">
           <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Petra.bet Casino Premium" class="hero-img">
           <h1 data-i18n="review">مراجعتنا</h1>
@@ -62,7 +60,7 @@
         </div>
       </section>
       <section class="section-parallax review-details">
-        <div class="parallax-bg" data-speed="0.2" style="background: radial-gradient(ellipse at center, rgba(30,32,44,0.6), transparent);"></div>
+        <div class="parallax-bg bg-radial-dark" data-speed="0.2"></div>
         <div class="parallax-content">
           <h2 data-i18n="how_register_title"></h2>
           <ol>
@@ -78,7 +76,7 @@
             <li data-i18n="petra_bonus3"></li>
           </ul>
           <h2 data-i18n="slots_games_title"></h2>
-          <div class="grid" style="justify-items:center;">
+          <div class="grid justify-center">
             <div class="card-3d">
               <img class="icon-3d" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Slot Machine Premium">
               <h3>Book of Dead</h3>
@@ -119,7 +117,7 @@
           </div>
           <h2 data-i18n="platform_screenshots"></h2>
           <div class="grid">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Petra.bet Slot Screenshot" style="border-radius:18px; box-shadow:0 4px 32px gold;">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Petra.bet Slot Screenshot" class="screenshot-img">
             <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Petra.bet Roulette Screenshot" class="hero-img">
           </div>
         </div>

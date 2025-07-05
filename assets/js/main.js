@@ -3,12 +3,54 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   // Highlight active nav link
-  const navLinks = document.querySelectorAll('nav a');
+  const navLinks = document.querySelectorAll('.nav-center a, .mobile-nav a');
   navLinks.forEach(link => {
     if (location.pathname.endsWith(link.getAttribute('href'))) {
       link.classList.add('active');
     }
   });
+
+  // Hamburger/mobile nav logic
+  const hamburger = document.querySelector('.header-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      mobileNav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function () {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
+
+  // Language switcher logic
+  const langBtns = document.querySelectorAll('.header-lang button');
+  langBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      localStorage.setItem('lang', btn.dataset.lang);
+      document.body.classList.toggle('ltr', btn.dataset.lang === 'en');
+      document.body.classList.toggle('rtl', btn.dataset.lang === 'ar');
+      document.documentElement.setAttribute('lang', btn.dataset.lang);
+      document.documentElement.setAttribute('dir', btn.dataset.lang === 'ar' ? 'rtl' : 'ltr');
+      langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === btn.dataset.lang));
+      if (typeof updateTranslations === 'function') updateTranslations();
+    });
+  });
+  // On load, set lang from localStorage
+  const lang = localStorage.getItem('lang') || 'ar';
+  document.body.classList.toggle('ltr', lang === 'en');
+  document.body.classList.toggle('rtl', lang === 'ar');
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  if (typeof updateTranslations === 'function') updateTranslations();
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -20,29 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-
-  // Body language class
-  const lang = localStorage.getItem('lang') || 'ar';
-  document.body.classList.toggle('ltr', lang === 'en');
-  document.body.classList.toggle('rtl', lang === 'ar');
-
-  // Mobile nav toggle
-  const hamburger = document.querySelector('.hamburger');
-  const mobileNav = document.getElementById('mobile-nav');
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', function () {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      mobileNav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-    });
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function () {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        mobileNav.setAttribute('aria-hidden', 'true');
-      });
-    });
-  }
 });
 
 // Fade-in/slide-in animation on scroll

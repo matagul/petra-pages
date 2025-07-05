@@ -20,23 +20,12 @@
   <script type="module" src="assets/js/3d-hero.js"></script>
 </head>
 <body>
-  <header>
-    <div class="header-row">
-      <div class="site-logo">
-        <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
-        <span>Petra.bet</span>
-      </div>
-      <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="language-switcher">
-        <button data-lang="ar">العربية</button>
-        <button data-lang="en">English</button>
-      </div>
+  <header class="header">
+    <div class="header-logo">
+      <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
+      <span>Petra.bet</span>
     </div>
-    <nav>
+    <nav class="nav-center">
       <a href="index.html" data-i18n="home">الرئيسية</a>
       <a href="petra.html" data-i18n="review">مراجعتنا</a>
       <a href="bonuses.html" data-i18n="bonuses">البونصات</a>
@@ -44,6 +33,15 @@
       <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
       <a href="about.html" data-i18n="about">حول الموقع</a>
     </nav>
+    <div class="header-lang">
+      <button data-lang="ar">العربية</button>
+      <button data-lang="en">English</button>
+    </div>
+    <button class="header-toggle" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
       <a href="index.html" data-i18n="home">الرئيسية</a>
       <a href="petra.html" data-i18n="review">مراجعتنا</a>
@@ -66,10 +64,10 @@
       </section>
       <!-- Features section: 3D icons and animated grid -->
       <section class="section-parallax" id="features">
-        <div class="parallax-bg" data-speed="0.2" style="background: radial-gradient(ellipse at center, rgba(30,32,44,0.6), transparent);"></div>
+        <div class="parallax-bg bg-radial-dark" data-speed="0.2"></div>
         <div class="parallax-content">
-          <h2 data-i18n="features" style="text-align:center; margin-bottom:2.5rem;">مميزاتنا</h2>
-          <div class="grid" style="justify-items:center;">
+          <h2 data-i18n="features" class="centered-title">مميزاتنا</h2>
+          <div class="grid justify-center">
             <div class="card-3d slide-in-up">
               <img class="icon-3d" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Slot Machine Close-up">
               <h3 data-i18n="secure_banking">مدفوعات آمنة</h3>
@@ -91,10 +89,10 @@
 
       <!-- Games section: 3D card grid with images -->
       <section class="section-parallax" id="offerings">
-        <div class="parallax-bg" data-speed="0.25" style="background: radial-gradient(ellipse at center, rgba(0,163,255,0.2), transparent);"></div>
+        <div class="parallax-bg bg-radial-blue" data-speed="0.25"></div>
         <div class="parallax-content">
-          <h2 data-i18n="offerings" style="text-align:center; margin-bottom:2.5rem;">ألعابنا</h2>
-          <div class="grid" style="justify-items:center;">
+          <h2 data-i18n="offerings" class="centered-title">ألعابنا</h2>
+          <div class="grid justify-center">
             <div class="card-3d slide-in-up">
               <img class="icon-3d" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Roulette Table">
               <h3>Roulette</h3>
@@ -116,24 +114,24 @@
 
       <!-- Affiliate Dashboard Preview -->
       <section class="section-parallax" id="affiliate">
-        <div class="parallax-bg" data-speed="0.22" style="background: radial-gradient(circle at center, rgba(0,255,208,0.1), transparent);"></div>
+        <div class="parallax-bg bg-radial-green" data-speed="0.22"></div>
         <div class="parallax-content">
-          <h2 data-i18n="affiliate" style="text-align:center; margin-bottom:2.5rem;">برنامج الشراكة</h2>
-          <div class="card-3d slide-in-up" style="max-width:500px; margin:auto;">
+          <h2 data-i18n="affiliate" class="centered-title">برنامج الشراكة</h2>
+          <div class="card-3d slide-in-up card-maxwidth-500">
             <img class="icon-3d" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Fintech Analytics Dashboard">
             <h3>Affiliate Dashboard</h3>
             <p data-i18n="affiliate_desc"></p>
-            <a href="https://petraaffiliate.com" class="cta-btn" style="margin-top:1.2rem;" data-i18n="affiliate_btn"></a>
+            <a href="https://petraaffiliate.com" class="cta-btn mt-1-2" data-i18n="affiliate_btn"></a>
           </div>
         </div>
       </section>
 
       <!-- Legality and security section -->
       <section class="section-parallax" id="about-legal">
-        <div class="parallax-bg" data-speed="0.2" style="background-image:url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80'); opacity:0.13;"></div>
+        <div class="parallax-bg parallax-bg-img"></div>
         <div class="parallax-content">
-          <h2 data-i18n="about_legal" style="text-align:center; margin-bottom:2.5rem;">الشرعية والأمان</h2>
-          <div class="card-3d slide-in-up" style="max-width:600px; margin:auto;">
+          <h2 data-i18n="about_legal" class="centered-title">الشرعية والأمان</h2>
+          <div class="card-3d slide-in-up card-maxwidth-600">
             <img class="icon-3d" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Luxury Casino Interior">
             <p data-i18n="legal_long"></p>
           </div>
@@ -165,9 +163,9 @@
                   <td>200</td>
                   <td>35x</td>
                   <td>
-                    <span title="VIP Support" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
-                    <span title="3D Games" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
-                    <span title="Fast Payouts" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
+                    <span title="VIP Support" class="gold-text icon-1em">&#10003;</span>
+                    <span title="3D Games" class="gold-text icon-1em">&#10003;</span>
+                    <span title="Fast Payouts" class="gold-text icon-1em">&#10003;</span>
                   </td>
                 </tr>
                 <tr>
@@ -177,9 +175,9 @@
                   <td>120</td>
                   <td>40x</td>
                   <td>
-                    <span title="VIP Support" style="color:#aaa;font-size:1.2em;">&#10007;</span>
-                    <span title="3D Games" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
-                    <span title="Fast Payouts" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
+                    <span title="VIP Support" class="gray-text icon-1em">&#10007;</span>
+                    <span title="3D Games" class="gold-text icon-1em">&#10003;</span>
+                    <span title="Fast Payouts" class="gold-text icon-1em">&#10003;</span>
                   </td>
                 </tr>
                 <tr>
@@ -189,9 +187,9 @@
                   <td>150</td>
                   <td>35x</td>
                   <td>
-                    <span title="VIP Support" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
-                    <span title="3D Games" style="color:#aaa;font-size:1.2em;">&#10007;</span>
-                    <span title="Fast Payouts" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
+                    <span title="VIP Support" class="gold-text icon-1em">&#10003;</span>
+                    <span title="3D Games" class="gray-text icon-1em">&#10007;</span>
+                    <span title="Fast Payouts" class="gold-text icon-1em">&#10003;</span>
                   </td>
                 </tr>
                 <tr>
@@ -201,9 +199,9 @@
                   <td>0</td>
                   <td>30x</td>
                   <td>
-                    <span title="VIP Support" style="color:var(--color-gold);font-size:1.2em;">&#10003;</span>
-                    <span title="3D Games" style="color:#aaa;font-size:1.2em;">&#10007;</span>
-                    <span title="Fast Payouts" style="color:#aaa;font-size:1.2em;">&#10007;</span>
+                    <span title="VIP Support" class="gold-text icon-1em">&#10003;</span>
+                    <span title="3D Games" class="gray-text icon-1em">&#10007;</span>
+                    <span title="Fast Payouts" class="gray-text icon-1em">&#10007;</span>
                   </td>
                 </tr>
               </tbody>
