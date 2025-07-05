@@ -17,9 +17,20 @@
   <script src="assets/js/main.js"></script>
 <body>
   <header>
-    <div class="language-switcher">
-      <button data-lang="ar" class="active">العربية</button>
-      <button data-lang="en">English</button>
+    <div style="display:flex;align-items:center;gap:0.5rem;width:100%;justify-content:space-between;">
+      <div class="site-logo">
+        <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
+        <span>Petra.bet</span>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="language-switcher">
+        <button data-lang="ar">العربية</button>
+        <button data-lang="en">English</button>
+      </div>
     </div>
     <nav>
       <a href="index.html">الرئيسية</a>
@@ -29,6 +40,14 @@
       <a href="faq.html">الأسئلة الشائعة</a>
       <a href="about.html">حول الموقع</a>
     </nav>
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="index.html">الرئيسية</a>
+      <a href="petra.html" class="active">مراجعتنا</a>
+      <a href="bonuses.html">البونصات</a>
+      <a href="slots.html">أفضل السلوْتس</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
+      <a href="about.html">حول الموقع</a>
+    </div>
   </header>
   <main>
     <div class="container">

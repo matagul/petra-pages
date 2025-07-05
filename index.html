@@ -21,9 +21,20 @@
 </head>
 <body>
   <header>
-    <div class="site-logo">
-      <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
-      <span>Petra.bet</span>
+    <div style="display:flex;align-items:center;gap:0.5rem;width:100%;justify-content:space-between;">
+      <div class="site-logo">
+        <img src="assets/img/petra-logo.png" alt="Petra.bet Logo">
+        <span>Petra.bet</span>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="language-switcher">
+        <button data-lang="ar">العربية</button>
+        <button data-lang="en">English</button>
+      </div>
     </div>
     <nav>
       <a href="index.html" data-i18n="home">الرئيسية</a>
@@ -33,15 +44,6 @@
       <a href="faq.html" data-i18n="faq">الأسئلة الشائعة</a>
       <a href="about.html" data-i18n="about">حول الموقع</a>
     </nav>
-    <button class="hamburger" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="language-switcher">
-      <button data-lang="ar">العربية</button>
-      <button data-lang="en">English</button>
-    </div>
     <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
       <a href="index.html" data-i18n="home">الرئيسية</a>
       <a href="petra.html" data-i18n="review">مراجعتنا</a>
@@ -54,8 +56,8 @@
   <main>
     <div class="container">
       <section class="hero">
-        <canvas id="hero-canvas" class="hero-canvas"></canvas>
         <div class="parallax-bg" data-speed="0.15" style="background-image:url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=1200&q=80'); opacity:0.18;"></div>
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
         <div class="hero-content fade-in">
           <h1 data-i18n="hero_title">Petra Bet: حيث يلتقي الفخامة باللعب</h1>
           <p data-i18n="hero_desc">انضم إلى عالم النخبة مع أفضل كازينو اونلاين في الأردن. بونصات حصرية، ألعاب ثلاثية الأبعاد، ودعم VIP.</p>
