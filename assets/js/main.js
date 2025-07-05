@@ -26,3 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.classList.toggle('ltr', lang === 'en');
   document.body.classList.toggle('rtl', lang === 'ar');
 });
+
+// Fade-in/slide-in animation on scroll
+window.addEventListener('DOMContentLoaded', function () {
+  const animatedElems = document.querySelectorAll('.fade-in, .slide-in-up');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    animatedElems.forEach(el => observer.observe(el));
+  } else {
+    // Fallback: show all
+    animatedElems.forEach(el => el.classList.add('visible'));
+  }
+});

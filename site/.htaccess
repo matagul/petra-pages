@@ -1,3 +1,0 @@
-# Petra.bet - disable directory listing and set default index
-Options -Indexes
-DirectoryIndex index.html
