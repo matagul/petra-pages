@@ -25,6 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
   const lang = localStorage.getItem('lang') || 'ar';
   document.body.classList.toggle('ltr', lang === 'en');
   document.body.classList.toggle('rtl', lang === 'ar');
+
+  // Mobile nav toggle
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function () {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      mobileNav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function () {
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
 });
 
 // Fade-in/slide-in animation on scroll
