@@ -1,0 +1,52 @@
+/* Petra.bet Global Image Variables & Usage
+--------------------------------------------------
+This file centralizes all image URLs, alt texts, and recommended CSS classes for use across the site.
+Update this file to change images globally.
+
+Usage Example (HTML):
+  <img src="var(--img-hero)" alt="var(--img-hero-alt)" class="img-responsive img-hero">
+
+--------------------------------------------------
+*/
+:root {
+  /* Hero Section */
+  --img-hero: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80');
+  --img-hero-alt: 'Slot Machine Close-up';
+
+  /* Features Section */
+  --img-feature-banking: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80');
+  --img-feature-banking-alt: 'Playing Cards on Table';
+  --img-feature-vip: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80');
+  --img-feature-vip-alt: 'Casino Chip on Table';
+  --img-feature-licensed: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80');
+  --img-feature-licensed-alt: 'Fintech Analytics Dashboard';
+
+  /* Games Section */
+  --img-game-roulette: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80');
+  --img-game-roulette-alt: 'Roulette Table';
+  --img-game-blackjack: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80');
+  --img-game-blackjack-alt: 'Blackjack Cards';
+  --img-game-slots: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80');
+  --img-game-slots-alt: 'Slot Machine Reels';
+
+  /* Affiliate Section */
+  --img-affiliate-dashboard: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80');
+  --img-affiliate-dashboard-alt: 'Fintech Analytics Dashboard';
+
+  /* Legal Section */
+  --img-legal: url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80');
+  --img-legal-alt: 'Luxury Casino Interior';
+}
+
+/* Example classes for each image (optional, for semantic clarity) */
+.img-hero { background-image: var(--img-hero); }
+.img-feature-banking { background-image: var(--img-feature-banking); }
+.img-feature-vip { background-image: var(--img-feature-vip); }
+.img-feature-licensed { background-image: var(--img-feature-licensed); }
+.img-game-roulette { background-image: var(--img-game-roulette); }
+.img-game-blackjack { background-image: var(--img-game-blackjack); }
+.img-game-slots { background-image: var(--img-game-slots); }
+.img-affiliate-dashboard { background-image: var(--img-affiliate-dashboard); }
+.img-legal { background-image: var(--img-legal); }
+
+/* To use as <img> src, reference the URL directly from this file's documentation. */ 

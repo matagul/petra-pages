@@ -489,3 +489,13 @@ img, svg {
 .parallax-bg-img { background-image: url('https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80'); opacity: 0.13; }
 
 .screenshot-img { border-radius: 18px; box-shadow: 0 4px 32px gold; }
+
+/* Global responsive image utility */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius, 18px);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  object-fit: cover;
+}
