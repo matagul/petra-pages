@@ -1,0 +1,530 @@
+/* Responsive Design for Premium Casino */
+
+/* Mobile First Approach */
+@media (max-width: 480px) {
+  /* Header */
+  .header-container {
+    padding: 0 0.5rem;
+  }
+  
+  .header-logo span {
+    font-size: 1.2rem;
+  }
+  
+  .header-actions {
+    gap: 0.25rem;
+  }
+  
+  .cta-header {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .lang-switcher button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Hero */
+  .hero {
+    padding: 4rem 0.5rem 2rem;
+  }
+  
+  .hero-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-cta-group {
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-primary {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .cta-secondary {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-features {
+    gap: 1rem;
+  }
+  
+  .hero-feature {
+    font-size: 0.8rem;
+  }
+  
+  /* Sections */
+  .bonus-section,
+  .slots-section,
+  .comparison-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Bonus Cards */
+  .bonus-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .bonus-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .bonus-amount {
+    font-size: 2.5rem;
+  }
+  
+  .bonus-title {
+    font-size: 1.1rem;
+  }
+  
+  .bonus-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bonus-features {
+    margin-bottom: 1.5rem;
+  }
+  
+  .bonus-features li {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+  
+  /* Slots */
+  .slots-tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .slot-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .slots-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .slot-card {
+    max-width: 100%;
+  }
+  
+  .slot-image {
+    height: 160px;
+  }
+  
+  .slot-content {
+    padding: 1rem;
+  }
+  
+  .slot-title {
+    font-size: 1.1rem;
+  }
+  
+  .slot-provider {
+    font-size: 0.8rem;
+  }
+  
+  .slot-features {
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .slot-feature {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .slot-cta {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Comparison Table */
+  .comparison-table {
+    font-size: 0.75rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table th,
+  .comparison-table td,
+  .comparison-table tr {
+    display: block;
+  }
+  
+  .comparison-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .comparison-table tr {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--gradient-card);
+  }
+  
+  .comparison-table td {
+    border: none;
+    position: relative;
+    padding: 0.5rem 0;
+    padding-left: 50%;
+    white-space: normal;
+  }
+  
+  .comparison-table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: var(--color-accent-gold);
+  }
+  
+  .casino-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Sticky CTA */
+  .sticky-cta-content {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  
+  .sticky-cta-text {
+    font-size: 0.9rem;
+  }
+  
+  .sticky-cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0.5rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section p {
+    font-size: 0.85rem;
+  }
+  
+  .payment-methods img,
+  .footer-badges img,
+  .responsible-gaming img {
+    height: 20px;
+    margin: 0.2rem;
+  }
+  
+  .footer-bottom {
+    padding: 1rem 0.5rem;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  
+  .hero {
+    padding: 5rem 1rem 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-cta-group {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .bonus-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .comparison-table {
+    font-size: 0.85rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.8rem 0.6rem;
+  }
+  
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-desktop {
+    gap: 1.5rem;
+  }
+  
+  .nav-desktop a {
+    font-size: 0.9rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .bonus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .header-container {
+    max-width: 1400px;
+  }
+  
+  .bonus-container,
+  .slots-container,
+  .comparison-container {
+    max-width: 1400px;
+  }
+  
+  .bonus-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .slots-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .section-title {
+    font-size: 3.5rem;
+  }
+  
+  .bonus-amount {
+    font-size: 3.5rem;
+  }
+  
+  .slots-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .header-logo img,
+  .casino-logo {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 80vh;
+    padding: 3rem 1rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-cta-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .bonus-section,
+  .slots-section,
+  .comparison-section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header,
+  .sticky-cta,
+  .mobile-nav,
+  .animated-bg {
+    display: none !important;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .bonus-section,
+  .slots-section,
+  .comparison-section {
+    padding: 1rem 0;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .bonus-card,
+  .slot-card {
+    border: 1px solid #ccc;
+    background: white !important;
+    color: black !important;
+  }
+  
+  .comparison-table {
+    border: 1px solid #ccc;
+    background: white !important;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    border: 1px solid #ccc;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .floating-element {
+    animation: none;
+  }
+  
+  .hero-badge {
+    animation: none;
+  }
+  
+  .fade-in,
+  .slide-in-left,
+  .slide-in-right,
+  .scale-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  /* Already using dark theme, but can add overrides if needed */
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .bonus-card,
+  .slot-card {
+    border: 2px solid var(--color-accent-gold);
+  }
+  
+  .comparison-table {
+    border: 2px solid var(--color-accent-gold);
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    border: 1px solid var(--color-accent-gold);
+  }
+  
+  .cta-primary,
+  .cta-secondary,
+  .slot-cta {
+    border: 2px solid var(--color-accent-gold);
+  }
+}
