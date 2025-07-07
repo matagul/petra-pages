@@ -41,7 +41,6 @@ function init3DRoulette() {
 
   window.addEventListener('resize', onWindowResize);
 
-main
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
